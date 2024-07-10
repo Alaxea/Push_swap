@@ -36,16 +36,18 @@ void	swap_stack_a_and_b(long *stack_a, long *stack_b,
 void	sort_3_num(long *stack_a, int *num_in_a);
 void	sort_5_num(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
 void	sort_other(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
+void	quicksort(long *array, int low, int high);
 void	free_stacks(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
 void	parameters(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
 void	ft_new_allocation(long **tab, int startsize, int newsize);
 void	free_str(char **str);
+int		partition(long *array, int low, int high);
 int		stack_size(int argc, char **argv);
-int		duplicates(long *stack_a, int *num_in_a);
+int		duplicates(long *stack_a, int num_in_a);
 int		ft_strlen(const char *str);
 int		is_digit(int i);
 int		only_numbers(char *num);
-int		number_limit(long *stack_a, int *num_in_a);
+int		number_limit(long *stack_a, int num_in_a);
 int		is_stack_is_sorted(long *stack_a, int *num_in_a);
 int		ft_atoi(const char *str);
 int		numbers_input(long *stack_a, int *num_in_a,

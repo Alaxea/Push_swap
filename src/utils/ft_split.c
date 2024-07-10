@@ -12,12 +12,12 @@
 
 #include "push_swap.h"
 
-static void	ft_freeup(char **strs, int count)
+static void	ft_freeup(char **strs)
 {
 	int	i;
 
 	i = 0;
-	while (i < count)
+	while (strs[i] != NULL)
 	{
 		free(strs);
 		i++;
@@ -106,10 +106,7 @@ char	**ft_split(const char *str, char c)
 	{
 		strs[i] = ft_stralloc(((char *)str), c, &pos);
 		if (strs[i] == NULL)
-		{
-			ft_freeup(strs, i);
-			return (NULL);
-		}
+			ft_freeup(strs);
 		i++;
 	}
 	return (strs);

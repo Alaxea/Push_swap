@@ -14,28 +14,9 @@
 
 void	array_stack(long *array, int *stack_size)
 {
-	long	i;
-	long	j;
-	long	temp;
-
-	i = 0;
-	j = 0;
-	while (i < stack_size[0])
-	{
-		j = i + 1;
-		while (j < stack_size[0])
-		{
-			if (array[i] > array[j])
-			{
-				temp = array[i];
-				array[i] = array[j];
-				array[j] = temp;
-			}
-			j++;
-		}
-		i++;
-	}
+	quicksort(array, 0, stack_size[0] - 1);
 }
+//quick sort from sort_other2//
 
 void	swap_stack_a_first(long *copy, long *copy_swap_stack_a,
 	long *stack_a, int *num_in_a)

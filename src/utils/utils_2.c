@@ -39,11 +39,7 @@ int	only_numbers(char *num)
 	while (num[i])
 	{
 		if (num[i] == 45)
-		{
-			if (i != 0)
-				return (0);
 			minus++;
-		}
 		else if (is_digit(num[i]) == 0)
 			return (0);
 		i++;
@@ -53,12 +49,12 @@ int	only_numbers(char *num)
 	return (1);
 }
 
-int	number_limit(long *stack_a, int *num_in_a)
+int	number_limit(long *stack_a, int num_in_a)
 {
 	int	i;
 
 	i = 0;
-	while (i < *num_in_a)
+	while (i < num_in_a)
 	{
 		if ((stack_a[i] > 2147483648) || (stack_a[i] < -2147483648))
 		{

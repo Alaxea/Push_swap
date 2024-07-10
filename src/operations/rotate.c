@@ -27,7 +27,7 @@ void	rotate_stack_a(long *stack_a, int *num_in_a)
 	}
 	stack_a[num_in_a[1] - 1] = *temp;
 	free(temp);
-	write(1, "Rotate stack a\n", 15);
+	write(1, "ra\n", 3);
 }
 
 void	rotate_stack_b(long *stack_b, int *num_in_b)
@@ -45,7 +45,7 @@ void	rotate_stack_b(long *stack_b, int *num_in_b)
 	}
 	stack_b[*num_in_b - 1] = *temp;
 	free(temp);
-	write(1, "Rotate stack b\n", 15);
+	write(1, "rb\n", 3);
 }
 
 void	rot_a_and_b(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
@@ -71,5 +71,5 @@ void	rot_a_and_b(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
 	}
 	stack_b[*num_in_b - 1] = *temp;
 	free(temp);
-	write(1, "Rotate stack a and b\n", 21);
+	write(1, "rr\n", 3);
 }

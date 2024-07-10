@@ -23,13 +23,15 @@ int	ft_atoi(const char *str)
 	res = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	if (str[i] == '-')
-		sign = -1;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
+	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + str[i] - '0';
+		res = (str[i] - '0') + (res * 10);
 		i++;
 	}
 	return (sign * res);
@@ -64,7 +66,7 @@ int	numbers_input(long *stack_a, int *num_in_a,
 	num_in_a[0] = num;
 	num_in_a[1] = num_in_a[0];
 	i = 0;
-	while (i < num)
+	while (i < num_in_a[0])
 	{
 		stack_a[i] = ft_atoi(numbers_list[i]);
 		i++;
@@ -108,9 +110,9 @@ int	separating_input(long *stack_a, int *num_in_a, char **argv)
 		if (check_separated_input(stack_a, num_in_a, argv) == -1)
 			return (-1);
 	}
-	if (duplicates(stack_a, num_in_a) == -1)
+	if (duplicates(stack_a, num_in_a[1]) == -1)
 		return (-1);
-	if (number_limit(stack_a, num_in_a) == -1)
+	if (number_limit(stack_a, num_in_a[1]) == -1)
 		return (-1);
 	return (0);
 }

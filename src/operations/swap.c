@@ -24,7 +24,7 @@ void	swap_stack_a(long *stack_a, int *num_in_a)
 		stack_a[1] = temp[0];
 	}
 	free(temp);
-	write(1, "Swap stack a\n", 13);
+	write(1, "sa\n", 3);
 }
 
 void	swap_stack_b(long *stack_b, int *num_in_b)
@@ -39,7 +39,7 @@ void	swap_stack_b(long *stack_b, int *num_in_b)
 		stack_b[1] = temp[0];
 	}
 	free(temp);
-	write(1, "Swap stack b\n", 13);
+	write(1, "sb\n", 3);
 }
 
 void	swap_stack_a_and_b(long *stack_a, long *stack_b,
@@ -61,5 +61,5 @@ void	swap_stack_a_and_b(long *stack_a, long *stack_b,
 		stack_b[1] = temp[0];
 	}
 	free(temp);
-	write(1, "Swap stack and b\n", 17);
+	write(1, "ss\n", 3);
 }
