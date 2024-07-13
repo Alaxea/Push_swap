@@ -12,18 +12,6 @@
 
 #include "push_swap.h"
 
-void	rot_radix_a(long *stack_a, int *num_in_a)
-{
-	rotate_stack_a(stack_a, num_in_a);
-	rotate_stack_a(stack_a, num_in_a);
-}
-
-void	rev_rot_radix_a(long *stack_a, int *num_in_a)
-{
-	rev_rot_stack_a(stack_a, num_in_a);
-	rev_rot_stack_a(stack_a, num_in_a);
-}
-
 void	stack_one(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
 {
 	if (stack_b[0] < stack_a[0])

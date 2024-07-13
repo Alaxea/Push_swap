@@ -12,18 +12,6 @@
 
 #include "push_swap.h"
 
-void	quicksort(long *array, int low, int high)
-{
-	int	pi;
-
-	if (low < high)
-	{
-		pi = partition(array, low, high);
-		quicksort(array, low, pi - 1);
-		quicksort(array, pi + 1, high);
-	}
-}
-
 int	partition(long *array, int low, int high)
 {
 	long	pivot;
@@ -49,4 +37,16 @@ int	partition(long *array, int low, int high)
 	array[i + 1] = array[high];
 	array[high] = temp;
 	return (i + 1);
+}
+
+void	quicksort(long *array, int low, int high)
+{
+	int	pi;
+
+	if (low < high)
+	{
+		pi = partition(array, low, high);
+		quicksort(array, low, pi - 1);
+		quicksort(array, pi + 1, high);
+	}
 }
