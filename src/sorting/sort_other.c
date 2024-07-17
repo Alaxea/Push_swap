@@ -12,11 +12,30 @@
 
 #include "push_swap.h"
 
-void	array_stack(long *array, int *stack_size)
+void	sort_a_section(long *array, int *stack_size)
 {
-	quicksort(array, 0, stack_size[0] - 1);
+	long	i;
+	long	j;
+	long	temp;
+	
+	i = 0;
+	j = 0;
+	while(i < stack_size[0])
+	{
+		j = i + 1;
+		while (j < stack_size[0])
+		{
+			if(array[i] > array[j])
+			{
+				temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+			j++;
+		}
+		i++;
+	}
 }
-//quick sort from sort_other2//
 
 void	swap_stack_a_first(long *copy, long *copy_swap_stack_a,
 	long *stack_a, int *num_in_a)
@@ -91,7 +110,7 @@ void	sort_other(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
 	copy = (long *)malloc(num_in_a[0] * sizeof(long));
 	copy_swap_stack_a = (long *)malloc(num_in_a[0] * sizeof(long));
 	swap_stack_a_first(copy, copy_swap_stack_a, stack_a, num_in_a);
-	array_stack(copy, num_in_a);
+	sort_a_section(copy, num_in_a);
 	swap_stack_a_second(copy, copy_swap_stack_a, stack_a, num_in_a);
 	free(copy);
 	free(copy_swap_stack_a);
