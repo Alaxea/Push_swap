@@ -78,10 +78,7 @@ int	main(int argc, char **argv)
 	stack_b = (long *)malloc(sizeof(long) * stack_size(argc, argv));
 	if ((separating_input(stack_a, num_in_a, argv) == -1)
 		|| (is_stack_is_sorted(stack_a, num_in_a) == 0))
-	{
 		free_stacks(stack_a, stack_b, num_in_a, num_in_b);
-		return (1);
-	}
 	if ((num_in_a[1] == 2) && (stack_a[0] > stack_a[1]))
 		rotate_stack_a(stack_a, num_in_a);
 	else if (num_in_a[1] == 3)

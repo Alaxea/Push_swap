@@ -17,15 +17,15 @@ void	sort_a_section(long *array, int *stack_size)
 	long	i;
 	long	j;
 	long	temp;
-	
+
 	i = 0;
 	j = 0;
-	while(i < stack_size[0])
+	while (i < stack_size[0])
 	{
 		j = i + 1;
 		while (j < stack_size[0])
 		{
-			if(array[i] > array[j])
+			if (array[i] > array[j])
 			{
 				temp = array[i];
 				array[i] = array[j];
