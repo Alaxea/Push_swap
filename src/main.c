@@ -69,7 +69,7 @@ int	main(int argc, char **argv)
 	long	*stack_b;
 	int		*num_in_a;
 	int		*num_in_b;
-
+	
 	num_in_a = (int *)malloc(2 * sizeof(int));
 	num_in_b = (int *)malloc(sizeof(int));
 	check_parameters(argc, argv, num_in_a, num_in_b);

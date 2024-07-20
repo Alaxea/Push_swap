@@ -49,7 +49,7 @@ void	push_stack_b(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
 	}
 	stack_b[0] = stack_a[0];
 	i = 0;
-	while (i < num_in_a[1])
+	while (i < num_in_a[1] - 1)
 	{
 		stack_a[i] = stack_a[i + 1];
 		i++;

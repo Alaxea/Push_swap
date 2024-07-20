@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <errno.h>
 
+//OPERATIONS
 void	push_stack_a(long *stack_a, long *stack_b,
 			int *num_in_a, int *num_in_b);
 void	push_stack_b(long *stack_a, long *stack_b,
@@ -33,13 +34,14 @@ void	swap_stack_a(long *stack_a, int *num_in_a);
 void	swap_stack_b(long *stack_b, int *num_in_b);
 void	swap_stack_a_and_b(long *stack_a, long *stack_b,
 			int *num_in_a, int *num_in_b);
+//SORTING
 void	sort_3_num(long *stack_a, int *num_in_a);
 void	sort_5_num(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
+void	sort_other(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
+//UTILS
 void	free_stacks(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
 void	ft_new_allocation(long **tab, int startsize, int newsize);
-void	sort_other(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
 void	free_str(char **str);
-void	sort_a_section(long *array, int *stack_size);
 void	operations(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b);
 int		stack_size(int argc, char **argv);
 int		duplicates(long *stack_a, int num_in_a);

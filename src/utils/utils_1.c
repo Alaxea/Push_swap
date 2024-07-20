@@ -84,6 +84,16 @@ void	ft_new_allocation(long **tab, int startsize, int newsize)
 		}
 		*tab = temp;
 	}
+	else if ((*tab != NULL) && (startsize > newsize))
+	{
+		temp = malloc(sizeof(long) * (newsize));
+		while (i < newsize)
+		{
+			temp[i] = (*tab)[i];
+			i++;
+		}
+		*tab = temp;
+	}
 }
 
 void	operations(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
