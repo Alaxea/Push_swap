@@ -88,5 +88,6 @@ int	main(int argc, char **argv)
 	else
 		sort_other(stack_a, stack_b, num_in_a, num_in_b);
 	free_stacks(stack_a, stack_b, num_in_a, num_in_b);
+	free_and_exit(num_in_a, num_in_b);
 	return (0);
 }
