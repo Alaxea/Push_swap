@@ -23,7 +23,7 @@ void	two_rev_rotation_a(long *stack_a, int *num_in_a)
 	rev_rot_stack_a(stack_a, num_in_a);
 	rev_rot_stack_a(stack_a, num_in_a);
 }
-	
+
 void	stack_one(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
 {
 	if (stack_b[0] < stack_a[0])
@@ -39,13 +39,13 @@ void	stack_one(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)
 		rev_rot_stack_a(stack_a, num_in_a);
 		push_stack_a(stack_a, stack_b, num_in_a, num_in_b);
 		rev_rot_stack_a(stack_a, num_in_a);
-		rev_rot_stack_a(stack_a, num_in_a);	
+		rev_rot_stack_a(stack_a, num_in_a);
 	}
 	else if (stack_b[0] > stack_a[2])
 	{
 		push_stack_a(stack_a, stack_b, num_in_a, num_in_b);
 		rotate_stack_a(stack_a, num_in_a);
-	}	
+	}
 }
 
 void	stack_two(long *stack_a, long *stack_b, int *num_in_a, int *num_in_b)

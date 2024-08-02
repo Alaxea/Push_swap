@@ -75,8 +75,6 @@ void	ft_new_allocation(long **tab, int startsize, int newsize)
 	if (tab != NULL && *tab != NULL && startsize < newsize)
 	{
 		temp = malloc(sizeof(long) * newsize);
-		if (temp == NULL)
-			return ;
 		while (i < startsize)
 		{
 			temp[i] = (*tab)[i];
