@@ -15,36 +15,36 @@
 void	rotate_stack_a(long *stack_a, int *num_in_a)
 {
 	int		i;
-	long	*temp;
+	long	temp;
 
+	if (num_in_a[1] <= 1)
+		return ;
+	temp = stack_a[0];
 	i = 0;
-	temp = (long *)malloc(sizeof(long));
-	*temp = stack_a[0];
-	while (i < num_in_a[1])
+	while (i < num_in_a[1] - 1)
 	{
 		stack_a[i] = stack_a[i + 1];
 		i++;
 	}
-	stack_a[num_in_a[1] - 1] = *temp;
-	free(temp);
+	stack_a[num_in_a[1] - 1] = temp;
 	write(1, "ra\n", 3);
 }
 
 void	rotate_stack_b(long *stack_b, int *num_in_b)
 {
 	int		i;
-	long	*temp;
+	long	temp;
 
+	if (*num_in_b <= 1)
+		return ;
+	temp = stack_b[0];
 	i = 0;
-	temp = (long *)malloc(sizeof(long));
-	*temp = stack_b[0];
-	while (i < *num_in_b)
+	while (i < *num_in_b - 1)
 	{
 		stack_b[i] = stack_b[i + 1];
 		i++;
 	}
-	stack_b[*num_in_b - 1] = *temp;
-	free(temp);
+	stack_b[*num_in_b - 1] = temp;
 	write(1, "rb\n", 3);
 }
 
