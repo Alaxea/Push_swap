@@ -56,7 +56,7 @@ int	number_limit(long *stack_a, int num_in_a)
 	i = 0;
 	while (i < num_in_a)
 	{
-		if ((stack_a[i] > 2147483647) || (stack_a[i] < -2147483648))
+		if ((stack_a[i] > INT_MAX) || (stack_a[i] < INT_MIN))
 		{
 			write(1, "ERROR\n", 6);
 			return (-1);

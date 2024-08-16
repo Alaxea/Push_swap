@@ -12,12 +12,14 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
+# define MAX_INT INT_MAX
+# define MIN_INT INT_MIN
 # include <unistd.h>
 # include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <errno.h>
+# include <limits.h>
 
 //OPERATIONS
 void	push_stack_a(long *stack_a, long *stack_b,

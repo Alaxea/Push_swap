@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+/*It shifts larger elements to the end of the array,
+resulting in the array being sorted in ascending order.
+to prepare data for further processing in the radix sort algorithm.*/
 
 void	sort_a_section(long *array, int *stack_size)
 {
