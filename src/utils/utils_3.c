@@ -12,24 +12,28 @@
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+long long int	ft_atoi_long(const char *str)
 {
-	int	i;
-	int	sign;
-	int	res;
+	char			*nbr;
+	long long		i;
+	long long		sign;
+	long long		res;
 
-	i = 0;
-	sign = 1;
 	res = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+	sign = 1;
+	i = 0;
+	nbr = (char *)str;
+	while (nbr[i] == 32 || (nbr[i] >= 9 && nbr[i] <= 13))
 		i++;
-	if (str[i] == '-')
-		sign = -1;
-	while (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	if (nbr[i] == '-' || nbr[i] == '+')
 	{
-		res = res * 10 + str[i] - '0';
+		if (nbr[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (nbr[i] >= '0' && nbr[i] <= '9' )
+	{
+		res = res * 10 + nbr[i] - '0';
 		i++;
 	}
 	return (sign * res);
@@ -66,7 +70,7 @@ int	numbers_input(long *stack_a, int *num_in_a,
 	i = 0;
 	while (i < num_in_a[0])
 	{
-		stack_a[i] = ft_atoi(numbers_list[i]);
+		stack_a[i] = ft_atoi_long(numbers_list[i]);
 		i++;
 	}
 	free_str(numbers_list);
@@ -82,7 +86,7 @@ int	check_separated_input(long *stack_a, int *num_in_a, char **argv)
 	while (i < num_in_a[1])
 	{
 		if (only_numbers(argv[i + 1]) == 1)
-			stack_a[i] = ft_atoi(argv[i + 1]);
+			stack_a[i] = ft_atoi_long(argv[i + 1]);
 		else
 		{
 			write(1, "ERROR\n", 6);

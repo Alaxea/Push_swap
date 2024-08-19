@@ -52,7 +52,7 @@ int		is_digit(int i);
 int		only_numbers(char *num);
 int		number_limit(long *stack_a, int num_in_a);
 int		is_stack_is_sorted(long *stack_a, int *num_in_a);
-int		ft_atoi(const char *str);
+long long int	ft_atoi_long(const char *str);
 int		numbers_input(long *stack_a, int *num_in_a,
 			char **argv, char **numbers_list);
 int		check_separated_input(long *stack_a, int *num_in_a, char **argv);
