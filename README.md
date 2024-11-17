@@ -14,5 +14,5 @@ make
 ```
 - To execute the program, use the following command:
 ```
-./push swap
+./push swap [numbers to sort]
 ```
